@@ -5,10 +5,10 @@ _gentoo portage profile for
 etc/portage/make.conf
 
 
-USE=" -systemd "
-VIDEO_CARDS="intel"
+USE=" -systemd " \
+VIDEO_CARDS="intel"\
 
-etc...
+etc... \
 
 
 #adapting the entire system to the new USE flags \
