@@ -1,8 +1,8 @@
 #DOTFILES
 
-_gentoo portage profile for 
+#gentoo portage profile for 
 
-etc/portage/make.conf
+#etc/portage/make.conf
 
 COMMON_FLAGS="-march=sandybridge -O2 -pipe"
 CFLAGS="${COMMON_FLAGS}"
@@ -24,21 +24,18 @@ jpeg latex man pdf rss sound unicode usb vim cscope terminal wifi zip -systemd -
  
 VIDEO_CARDS="intel"
 
---- after setting or altering VIDEO_CARDS values 
-    remember to update the system using the following command so the changes take effect:
+#--- after setting or altering VIDEO_CARDS values 
+#    remember to update the system using the following command so the changes take effect:
 
-          root #emerge --ask --changed-use --deep @world
+#          root #emerge --ask --changed-use --deep @world
 
 
 
 
 #adapting the entire system to the new USE flags 
 
-'code'
-
-
             
-            sudo eerge --update --deep --newuse @world'
+#            sudo eerge --update --deep --newuse @world'
 
---- run this command to update USE-flags globally after you updated them
+#--- run this command to update USE-flags globally after you updated them
 
