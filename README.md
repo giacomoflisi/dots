@@ -38,6 +38,6 @@ VIDEO_CARDS="intel"
 
 > run this command to update USE-flags globally after you updated them
 
-```sudo eerge --update --deep --newuse @world'```
+```sudo emerge --update --deep --newuse @world'```
 
 
