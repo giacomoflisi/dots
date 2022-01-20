@@ -20,11 +20,14 @@ Plugin 'preservim/nerdtree'
 "edit comment faster
 Plugin 'preservim/nerdcommenter'
 
+"Plugin 'vim-syntastic/syntastic'
+
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 Plugin 'ycm-core/YouCompleteMe'
+"Plugin 'valloric/YouCompleteMe'
 "AUTOCOMPLETION
 
 call vundle#end()
@@ -83,6 +86,17 @@ nnoremap k gk
 
 packadd termdebug 		"plugin for gdb
 let g:termdebug_wide=1
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+"let g:syntastic_c_compiler_options="-Wall"
+"let g:syntastic_c_checkers=['gcc']
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 
 "setting line number...
 set nu
