@@ -6,8 +6,9 @@ export CONFIG_HOME="$HOME"/.config
 mkdir -p "$CONFIG_HOME"/bash
 mkdir -p "$CONFIG_HOME"/alacritty
 mkdir -p "$CONFIG_HOME"/alacritty/themes
-
+mkdir -p "$HOME"/scripts
 # terminal alacritty-theme
+
 git clone https://github.com/alacritty/alacritty-theme "$CONFIG_HOME"/alacritty/themes
 
 # Sym links
@@ -16,6 +17,7 @@ ln -sf "$PWD/.bash_profile" "$HOME"/.bash_profile
 ln -sf "$PWD/.bashrc" "$HOME"/.bashrc
 ln -sf "$PWD/.tmux.conf" "$HOME"/.tmux.conf
 ln -sf "$PWD/nvim" "$CONFIG_HOME"/nvim
+ln -sf "$PWD/scripts" "$HOME"/scripts
 
 # Packages
 
