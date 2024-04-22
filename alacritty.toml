@@ -1,0 +1,24 @@
+# docuentations here https://alacritty.org/config-alacritty.html
+# themes from https://github.com/alacritty/alacritty-theme
+
+# import = ["/Users/mischa/.config/alacritty/themes/themes/gruvbox_dark.toml"]
+import = ["~/.config/alacritty/themes/themes/gruvbox_dark.toml"]
+
+[shell]
+# start automatically in tmux
+program = "/usr/bin/tmux"
+
+[font]
+size = 20
+
+[font.normal]
+family = "UbuntuMono Nerd Font"
+
+[window]
+decorations = "none"
+startup_mode = "Maximized"
+
+[window.padding]
+x = 7
+y = 0
+
