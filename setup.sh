@@ -16,18 +16,19 @@ ln -sf "$PWD/alacritty.toml" "$CONFIG_HOME"/alacritty/alacritty.toml
 ln -sf "$PWD/.bash_profile" "$HOME"/.bash_profile
 ln -sf "$PWD/.bashrc" "$HOME"/.bashrc
 ln -sf "$PWD/.tmux.conf" "$HOME"/.tmux.conf
+ln -sf "$PWD/starship.toml" "$CONFIG_HOME"/starship.toml
 ln -sf "$PWD/nvim" "$CONFIG_HOME"/nvim
 ln -sf "$PWD/scripts" "$HOME"/scripts
 
-# bash environment
-bash exec -l
-
 # Packages
 # apt
-sudo apt install ripgrep gh
+sudo apt install ripgrep gh alacritty starship
 sudo apt install gcc g++ unzip
 sudo apt install fd starship
 sudo apt install neovim go lazygit
+
+# bash environment
+bash exec -l
 
 # ubuntu specific notes
 # create symbolic link to neovim from vim when not using neovim on
