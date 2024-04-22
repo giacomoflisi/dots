@@ -13,9 +13,14 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
 "nerdtree lets you manage files alongside vim
 Plugin 'preservim/nerdtree'
+
+" code text snippets engine
+Plugin 'SirVer/ultisnips'
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+
 
 "edit comment faster
 Plugin 'preservim/nerdcommenter'
@@ -29,6 +34,10 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'ycm-core/YouCompleteMe'
 "Plugin 'valloric/YouCompleteMe'
 "AUTOCOMPLETION
+
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'nvie/vim-flake8'
+"PYTHON"
 
 call vundle#end()
 " All of your Plugins must be added before the following line
@@ -77,12 +86,14 @@ set foldenable
 set foldlevelstart=10
 nnoremap <space> za 
 "spacebar open/close folded codeblocks"
-"set foldmethod=indent
+set foldmethod=indent
+set foldlevel=99
 
 "movement"
 nnoremap j gj
 nnoremap k gk
 
+set clipboard=unnamed
 
 packadd termdebug 		"plugin for gdb
 let g:termdebug_wide=1
@@ -118,14 +129,40 @@ filetype plugin indent on	"load file type plugins + indentation
 "set nowrap
 set expandtab
 
-"searching
+"SEARCHING
 set hlsearch			"highlight matches
 set incsearch			"incremental searching
 set ignorecase			"searches are case INSENSITIVE
 set smartcase			"unless they contain at least one capital letter
 
+"SPLITTING THE VIEW
+set splitbelow
+set splitright
+
 "navigation between split windows
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w><c-j>
+nnoremap <c-k> <c-w><c-k>
+nnoremap <c-h> <c-w><c-h>
+nnoremap <c-l> <c-w><c-l>
+
+"PYTHON"SECTION"""""""""""""""""""""""""""""""""""""""""""""
+au BufNewFile,BufRead *.py set textwidth=79 fileformat=unix tabstop=4 shiftwidth=4 expandtab autoindent softtabstop=4
+
+let python_highlight_all=1
+
+"MARK UNNECESSARY WHITESPACES
+"au BufNewFile,BufRead *.py,*.pyw,*.c,*.h,*.sh match ExtraWhitespace /\s\+$/
+
+let c_space_errors=1
+let c_no_trail_space_error = 1
+let c_no_tab_space_error = 1
+let python_space_errors=1
+
+"CODE SNIPPETS ULTISNIPS
+let g:UltiSnipsExpandTrigger="<enter>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
