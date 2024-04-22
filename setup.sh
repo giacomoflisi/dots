@@ -19,8 +19,10 @@ ln -sf "$PWD/.tmux.conf" "$HOME"/.tmux.conf
 ln -sf "$PWD/nvim" "$CONFIG_HOME"/nvim
 ln -sf "$PWD/scripts" "$HOME"/scripts
 
-# Packages
+# bash environment
+bash exec -l
 
+# Packages
 # apt
 sudo apt install ripgrep gh
 sudo apt install gcc g++ unzip
