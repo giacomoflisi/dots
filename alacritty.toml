@@ -9,7 +9,9 @@ import = ["~/.config/alacritty/themes/themes/gruvbox_dark.toml"]
 program = "/usr/bin/tmux"
 
 [font]
-size = 20
+#size = 10
+size = 15
+#size = 20
 
 [font.normal]
 family = "UbuntuMono Nerd Font"

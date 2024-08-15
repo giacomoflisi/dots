@@ -156,6 +156,7 @@ export GOBIN="$HOME/.local/bin"
 # export GOPRIVATE="github.com/$GITUSER/*,gitlab.com/$GITUSER/*"
 export GOPATH="$HOME/.local/share/go"
 export GOPATH="$HOME/go/"
+export PATH="$PATH:/usr/local/go/bin"
 
 # This clone() function is stolen from rwxrob
 
